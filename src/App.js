@@ -1,5 +1,6 @@
 import React from 'react'; 
 import requests from "./request"; 
+import List from "./components/MovieList/List"; 
 
 function App () {
 // NavBar() {
