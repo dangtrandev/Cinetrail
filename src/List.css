@@ -1,0 +1,16 @@
+.movie_wrapper{
+    padding: 20px; 
+    margin-top: 20px; 
+}
+.popular_container{
+    display: flex; 
+    width: 80%; 
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
+    
+}
+
+.movie_poster{
+    width: 200px; 
+    height: 300px; 
+}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'; 
 import axios from "./axios"; 
+import "./List.css";
 
 const base_url= "https://image.tmdb.org/t/p/w500" //baseURL link for picture of poster 
 
@@ -16,17 +17,23 @@ function List({fetchUrl, title}) {
       fetchData();
     }, [fetchUrl]) //the empty bracket allow run once only when the page refreshed
   return (
-    <div className="playlist_container">
-        <h2>{title}</h2>
-        <div className="posters_container">
-            {movies.map(
-              movie => <img
-               key={movie?.id}
-               className="movie_poster"
-               title={movie?.name || movie?.orginal_title || movie?.title}
-               src={`${base_url}${movie?.poster_path}`}
-               alt={movie.name}/>
-            )}
+    <div className="movie_wrapper">
+        <div className="popular_container">
+          <h2>{title}</h2>
+          <div className="popularCard_container">
+              {movies.map(
+                movie => <img
+                key={movie?.id}
+                className="movie_poster"
+                title={movie?.name || movie?.orginal_title || movie?.title}
+                src={`${base_url}${movie?.poster_path}`}
+                alt={movie.name}/>
+              )}
+            </div>
+        </div>
+        
+        <div className="top_rated_container">
+
         </div>
     </div>
   )
