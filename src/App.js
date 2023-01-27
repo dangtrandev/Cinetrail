@@ -16,7 +16,7 @@ function App () {
         {/* movie box + top-rated box */}
         <div className="movie_wrapper">
             <List title="Popular Movie" fetchUrl={requests.fetchPopular}/>
-            <List title="Top Rated Movie" fetchUrl={requests.fetchTopRated}/>
+            <List title="Top Rated Movie" fetchUrl={requests.fetchTopRated} isTopRated/>
         </div>
         {/* footer */}
     </div>

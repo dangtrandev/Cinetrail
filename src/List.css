@@ -7,10 +7,24 @@
     width: 80%; 
     flex-wrap: wrap; 
     justify-content: flex-start; 
-    
+
 }
 
 .movie_poster{
     width: 200px; 
     height: 300px; 
+    margin-top: 20px; 
+    margin-right: 20px; 
+}
+
+
+.topRated_container{
+    display:flex; 
+    flex-direction: column; 
+    width: 
+}
+
+.topRated_poster{
+    width: 220px; 
+    height: 124px; 
 }
