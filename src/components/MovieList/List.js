@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'; 
-import axios from "./axios";
-import requests from "./requests.js"; 
+import axios from './axios';
+
 
 const base_url= "https://image.tmdb.org/t/p/w500" //baseURL link for picture of poster 
 function List(fetchUrl, title) {
