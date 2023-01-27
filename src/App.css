@@ -1,5 +1,5 @@
 .movie_wrapper{
-    display: inline-flexd; 
+    display: flex; 
 
     flex-direction: row;  
 
