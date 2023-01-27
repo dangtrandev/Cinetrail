@@ -1,6 +1,6 @@
 .movie_wrapper{
-    display: flex; 
-    flex-direction: row; 
-    justify-content: space-between; 
+    display: inline-flexd; 
+
+    flex-direction: row;  
 
 }
