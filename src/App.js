@@ -14,7 +14,10 @@ function App () {
         {/* banner */}
         <Banner />
         {/* movie box + top-rated box */}
-        <List title="Trending Movie" fetchUrl={requests.fetchTrending}/>
+        <div className="movie_wrapper">
+            <List title="Popular Movie" fetchUrl={requests.fetchPopular}/>
+            <List title="Top Rated Movie" fetchUrl={requests.fetchTopRated}/>
+        </div>
         {/* footer */}
     </div>
   )
