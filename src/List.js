@@ -4,7 +4,7 @@ import "./List.css";
 
 const base_url= "https://image.tmdb.org/t/p/w500" //baseURL link for picture of poster 
 
-function List({fetchUrl, title}) {
+function List({fetchUrl, title, isTopRated}) {
     const [movies, setMovies] = useState([]); //set the initial value to an empty array
 
     useEffect(() => {
@@ -17,14 +17,14 @@ function List({fetchUrl, title}) {
       fetchData();
     }, [fetchUrl]) //the empty bracket allow run once only when the page refreshed
   return (
-        <div className="popular_container">
+        <div className={`popular_container ${isTopRated && "topRated_container"} `}>
           <h2>{title}</h2>
           <a>
-              <div className="popularCard_container">
+              <div className={`popularCard_container ${isTopRated && "topRated_container"}`}>
                 {movies.map(
                   movie => <img
                   key={movie?.id}
-                  className="movie_poster"
+                  className={`movie_poster ${isTopRated && "topRated_poster"}`}
                   title={movie?.name || movie?.orginal_title || movie?.title}
                   src={`${base_url}${movie?.poster_path}`}
                   alt={movie.name}/>
