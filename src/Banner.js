@@ -1,6 +1,7 @@
 import React from 'react'; 
 import { useState, useEffect } from 'react'; 
 import axios from "./axios"; 
+import "./Banner.css"
 
 const base_url= "https://image.tmdb.org/t/p/w500" //baseURL link for picture of poster 
 
@@ -21,7 +22,11 @@ function Banner({fetchUrl}) {
 
   return (
     <div className='banner_container'>
-     {movies && movies[0].original_title}
+      <img 
+      className='banner_poster'
+      src={`${base_url}${movies[0].backdrop_path}`}
+      alt={`${movies[0].name}`}
+      />
     </div>
   )
 }
