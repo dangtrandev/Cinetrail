@@ -3,7 +3,7 @@ import requests from "./request";
 import List from "./List"; 
 import Banner from "./Banner"; 
 import Nav from "./Nav"; 
-import "./App.css"
+import "./App.css"; 
 
 function App () {
 // NavBar() {
@@ -12,8 +12,8 @@ function App () {
         <p>Coding with Huy</p>
         {/* NavBar */}
         <Nav />
-        {/* banner */}
         <Banner />
+        {/* banner */}
         {/* movie box + top-rated box */}
         <div className="movie_wrapper">
             <List title="Popular Movie" fetchUrl={requests.fetchPopular}/>

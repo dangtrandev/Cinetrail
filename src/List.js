@@ -18,12 +18,12 @@ function List({fetchUrl, title, isTopRated}) {
       fetchData();
     }, [fetchUrl]) //the empty bracket allow run once only when the page refreshed
 
-    
+
   return (
         <div className={`popular_container ${isTopRated && "topRated_container"} `}>
           <h2>{title}</h2>
           <a>
-              <div className={`popularCard_container ${isTopRated && "topRated_container"}`}>
+              {/* <div className={`popularCard_container ${isTopRated && "topRated_container"}`}> */}
                 {movies.map(
                   movie => <img
                   key={movie?.id}
@@ -32,7 +32,7 @@ function List({fetchUrl, title, isTopRated}) {
                   src={`${base_url}${movie?.poster_path}`}
                   alt={movie.name}/>
                 )}
-              </div>
+              {/* </div> */}
             </a>
         </div>
   )
