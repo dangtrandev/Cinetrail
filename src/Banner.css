@@ -55,9 +55,9 @@
 .banner_title,
 .banner_description{
     margin-top: 10px;
-    font-family:'roboto', sans-serif;
+    font-family:'Roboto', sans-serif;
 }
 .banner_title{
-    font-size: 2rem; 
+    font-size: 2em; 
     font-weight: bold; 
 }
