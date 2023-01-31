@@ -12,7 +12,7 @@ function App () {
         <p>Coding with Huy</p>
         {/* NavBar */}
         <Nav />
-        <Banner />
+        <Banner title="Trending Movie" fetchUrl={requests.fetchTrending} />
         {/* banner */}
         {/* movie box + top-rated box */}
         <div className="movie_wrapper">
