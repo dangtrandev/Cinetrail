@@ -1,6 +1,29 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+:root {
+    --dark-bg: #221f1f;
+    --red: #e50916;
+    --white: #fff;
+    --light-bg: #3c3c3c;
+    --transparent-bg: rgba(20, 20, 20, 0.7);
+    --header-height: 70px; 
+}
+
+.homepage_container{
+    background-color: var(--dark-bg);
+    font-family: 'roboto', sans-serif;
+    color: white; 
+    font-weight: thin 100; 
+}
+
 .movie_wrapper{
     display: flex; 
-
+    flex-wrap: wrap;
     flex-direction: row;  
-
+    justify-content:  space-between;
+    padding: 20px; 
 }
