@@ -23,8 +23,9 @@
     flex-direction: column; 
     border-radius: 8px;
     width: 220px;
+    padding: 10px;
     -webkit-box-shadow: -11px 2px 33px 1px rgba(8,7,7,.75);
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .topRated_poster{
@@ -32,7 +33,7 @@
     max-height: 100px; 
 }
 
-h2{
+h2{ 
     font-size: 1.17em; 
     margin-block-start: 1em;
     margin-block-end: 1em;
