@@ -3,11 +3,12 @@ import requests from "./request";
 import List from "./List"; 
 import Banner from "./Banner"; 
 import Nav from "./Nav"; 
+import "./App.css"
 
 function App () {
 // NavBar() {
   return (
-    <div>
+    <div className="homepage_container">
         <p>Coding with Huy</p>
         {/* NavBar */}
         <Nav />

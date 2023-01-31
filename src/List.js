@@ -7,6 +7,7 @@ const base_url= "https://image.tmdb.org/t/p/w500" //baseURL link for picture of 
 function List({fetchUrl, title, isTopRated}) {
     const [movies, setMovies] = useState([]); //set the initial value to an empty array
 
+    //using the useEffect to import the data from themoviedb.org
     useEffect(() => {
       async function fetchData(){
         const request = await axios.get(fetchUrl); 
@@ -16,6 +17,8 @@ function List({fetchUrl, title, isTopRated}) {
       }
       fetchData();
     }, [fetchUrl]) //the empty bracket allow run once only when the page refreshed
+
+    
   return (
         <div className={`popular_container ${isTopRated && "topRated_container"} `}>
           <h2>{title}</h2>
