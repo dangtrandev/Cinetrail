@@ -43,6 +43,8 @@
 }
 
 .banner_info{
+    display: flex; 
+    flex-direction: column;
     height: 30vh;
     position: absolute; 
     z-index: 1; 
@@ -50,6 +52,11 @@
     color: var(--white); 
     width: 50%; 
     padding-left: 3%;
+}
+a{
+    color: var(--white); 
+    text-decoration: none; 
+    
 }
 .banner_genre, 
 .banner_title,

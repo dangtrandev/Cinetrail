@@ -22,8 +22,8 @@ function Banner({fetchUrl}) {
         return request; 
     }
     fetchData(); 
-  // }, [fetchUrl]);
-  }, []);
+  }, [fetchUrl]);
+  // }, []);
   //arrow function for clicking the left arrow 
   const handelLeft =()=>{
     if(index === 0) {
@@ -57,22 +57,23 @@ function Banner({fetchUrl}) {
           ></MdKeyboardArrowRight>
 
         <div className="banner_info">
-          <h1 className="banner_title">{movies[0]?.title}</h1>
-          <p className="banner_description">{movies[0]?.overview}</p>
-          <p className="banner_genre">{movies[0]?.genre_ids[0].name}</p>
-          <p className="banner_release_date">{`Release Date: ${movies[0]?.release_date}`}</p>
+          <h1 className="banner_title">{movies[index]?.title}</h1>
+          <p className="banner_description">{movies[index]?.overview}</p>
+          {/* <p className="banner_genre">{movies[index]?.genre_ids[index].name}</p> */}
+          <p className="banner_release_date">{`Release Date: ${movies[index]?.release_date}`}</p>
           <StarRatings 
-            ratings={movies[0]?.vote_average / 2}
+            rating={movies[index]?.vote_average /2} //vote_average is on the scale of 10
             starRatedColor="red"
-            starDemension="15px"
+            starDimension="15px"
             starSpacing="1px"
           />
+          <a href="#">See Details</a>
         </div>
      
       </div>
       <img 
       className='banner_poster'
-      src={`${base_url}${movies[0]?.backdrop_path}`}/>
+      src={`${base_url}${movies[index]?.backdrop_path}`}/>
     </div>
   )
 }
